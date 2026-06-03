@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="about-wrapper">
+  <!-- Left sticky sidebar -->
+  <aside class="about-sidebar">
+    {% if page.profile %}
+      <div class="sidebar-profile">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+          {% endif %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class
+            cache_bust=true
+          %}
+        {% endif %}
+
+        <h1 class="sidebar-name">
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.last_name }}
+          {% if page.profile.name_kr %}
+            <span class="name-kr">{{ page.profile.name_kr }}</span>
+          {% endif %}
+        </h1>
+
+        {% if page.subtitle %}
+          <p class="sidebar-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+
+        {% if page.profile.more_info %}
+          <div class="sidebar-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if page.social %}
+      <div class="sidebar-social">
+        <div class="contact-icons">{% social_links %}</div>
+      </div>
+    {% endif %}
+  </aside>
+
+  <!-- Right scrollable content -->
+  <main class="about-content">
+    {{ content }}
+  </main>
+</div>

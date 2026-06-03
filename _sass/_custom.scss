@@ -1,0 +1,270 @@
+/*******************************************************************************
+ * Custom overrides — dayoon-ko-style single-page academic layout
+ ******************************************************************************/
+
+/* ----- Links: keep them blue in both themes ----- */
+:root {
+  --global-theme-color: #0076df;
+  --global-hover-color: #0076df;
+}
+html[data-theme="dark"] {
+  --global-theme-color: #4c9bff;
+  --global-hover-color: #4c9bff;
+}
+
+/* ----- Header: remove the divider/border, let the toggle float ----- */
+#navbar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Two explicit theme buttons (sun / moon) */
+.theme-toggle-pair {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.theme-toggle-pair button {
+  background: none;
+  border: none;
+  padding: 0.15rem 0.35rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--global-text-color-light);
+  opacity: 0.55;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+.theme-toggle-pair button:hover {
+  opacity: 1;
+  color: var(--global-theme-color);
+}
+html[data-theme="light"] #theme-light,
+html[data-theme="dark"] #theme-dark {
+  opacity: 1;
+  color: var(--global-theme-color);
+}
+
+/* ----- Two-column about layout ----- */
+.about-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.75rem;
+}
+
+.about-sidebar {
+  flex: 0 0 248px;
+  width: 248px;
+  position: sticky;
+  top: 2.5rem;
+  text-align: center;
+}
+
+.about-sidebar img {
+  width: 200px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.sidebar-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.1rem 0 0.1rem;
+  line-height: 1.25;
+}
+.sidebar-name .name-kr {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+  margin-top: 0.15rem;
+}
+
+.sidebar-subtitle {
+  font-size: 0.92rem;
+  color: var(--global-text-color);
+  margin: 0.5rem 0 0.35rem;
+  line-height: 1.45;
+}
+
+.sidebar-info {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+.sidebar-info p {
+  margin: 0.1rem 0;
+}
+
+.sidebar-social {
+  margin-top: 0.9rem;
+}
+.sidebar-social .contact-icons {
+  font-size: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+}
+.sidebar-social .contact-icons a {
+  color: var(--global-text-color-light);
+}
+.sidebar-social .contact-icons a:hover {
+  color: var(--global-theme-color);
+}
+
+/* Right column: holds bio, news, publications */
+.about-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.about-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 3.25rem;
+  margin-bottom: 1.1rem;
+  padding-top: 2.25rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid var(--global-divider-color);
+}
+/* First section (About Me) needs no divider or extra top space */
+.about-content h2:first-of-type {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+.about-content p,
+.about-content li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ----- Recent News: plain list, not a table ----- */
+.recent-news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.recent-news li {
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+.recent-news .news-date {
+  font-weight: 600;
+  color: var(--global-text-color);
+  margin-right: 0.4rem;
+  white-space: nowrap;
+}
+
+/* ----- Publications: clean [N]-numbered list ----- */
+ol.bibliography {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  counter-reset: bib;
+}
+ol.bibliography > li {
+  counter-increment: bib;
+  margin-bottom: 1.6rem;
+}
+ol.bibliography > li::before {
+  content: none;
+}
+
+.pub-entry .pub-header {
+  line-height: 1.45;
+  margin-bottom: 0.1rem;
+}
+.pub-entry .pub-header .title {
+  font-weight: 700;
+}
+.pub-entry .pub-header .title::before {
+  content: "[" counter(bib) "] ";
+  font-weight: 700;
+}
+
+/* Inline [label] links after the title */
+.pub-entry .pub-links {
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+.pub-entry .pub-links a.pub-link {
+  color: var(--global-theme-color);
+  white-space: nowrap;
+  margin-left: 0.2rem;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.pub-entry .pub-links a.pub-link::before {
+  content: "[";
+}
+.pub-entry .pub-links a.pub-link::after {
+  content: "]";
+}
+
+/* Authors: own name underlined (not italic) */
+.pub-entry .author {
+  margin: 0.12rem 0;
+  line-height: 1.45;
+}
+.pub-entry .author .author-self {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Venue line: italic, no year */
+.pub-entry .pub-venue {
+  margin-top: 0.02rem;
+}
+.pub-entry .pub-venue em {
+  font-style: italic;
+  color: var(--global-text-color);
+}
+
+/* ----- Wide screens: pin the photo to the far left, center the body text ----- */
+@media (min-width: 1240px) {
+  .container:has(.about-wrapper) {
+    max-width: 100%;
+  }
+  .about-wrapper {
+    display: block;
+  }
+  .about-sidebar {
+    position: fixed;
+    top: 5rem;
+    /* Center the sidebar in the gap between the screen's left edge and the
+       body text's left edge. Content is 720px wide and centered, so its left
+       edge sits at (100vw - 720px)/2; the sidebar centers at half of that. */
+    width: 200px;
+    left: calc((100vw - 720px) / 4 - 100px);
+    flex: none;
+  }
+  .about-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* ----- Mobile: stack the columns ----- */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .about-sidebar {
+    position: static;
+    top: auto;
+    width: 100%;
+    flex-basis: auto;
+  }
+  .about-sidebar img {
+    width: 160px;
+  }
+}

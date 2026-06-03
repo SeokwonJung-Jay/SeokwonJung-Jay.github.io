@@ -1,0 +1,25 @@
+<div class="news">
+  {% if site.news != blank %}
+    {% assign news_size = site.news | size %}
+    {% assign news = site.news | reverse %}
+    {% if include.limit and page.announcements.limit %}
+      {% assign news_limit = page.announcements.limit %}
+    {% else %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+    <ul class="recent-news">
+      {% for item in news limit: news_limit %}
+        <li>
+          <span class="news-date">[{{ item.date | date: '%b %Y' }}]</span>
+          {% if item.inline %}
+            <span class="news-text">{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</span>
+          {% else %}
+            <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+</div>
