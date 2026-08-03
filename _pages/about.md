@@ -27,7 +27,7 @@ Hi! I'm an MSc student at KAIST AI, advised by [Seong Joon Oh](https://seongjoon
 - **Knowledge editing** through RAG, keeping models' factual knowledge up to date
 - Building **memory systems** and personalization for long-term, persistent agents
 
-Before my graduate studies, I spent six years co-founding and building a deep learning startup, working end-to-end across business, research, and engineering. That experience shaped how I think about research — not just as a technical problem, but as something that has to hold up in the messy, real-world systems where people actually rely on it.
+Before my graduate studies, I spent six years co-founding and building a deep learning startup, working end-to-end across business, research, and engineering. That experience shaped how I think about research: not just as a technical problem, but as something that has to hold up in the messy, real-world systems where people actually rely on it.
 
 In short, I'd like to build LLM-based systems that can remember, retrieve, and update what they know in a way that is both trustworthy and personalized to the people who use them.
 
