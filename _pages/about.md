@@ -31,6 +31,8 @@ Before my graduate studies, I spent six years co-founding and building a deep le
 
 In short, I'd like to build LLM-based systems that can remember, retrieve, and update what they know in a way that is both trustworthy and personalized to the people who use them.
 
+[**Download my CV**](/assets/pdf/CV_SeokwonJung.pdf) (PDF)
+
 ## 🔥 Recent News
 
 {% include news.liquid %}
