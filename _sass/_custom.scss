@@ -145,6 +145,15 @@ html[data-theme="dark"] #theme-dark {
   line-height: 1.65;
 }
 
+/* ----- CV download link -----
+   The theme paints `strong` with --global-text-color, which would otherwise
+   override the link color on `[**text**](...)`. Force the bold text inside
+   the link to inherit the link's own color. */
+.cv-link,
+.cv-link strong {
+  color: var(--global-theme-color);
+}
+
 /* ----- Recent News: plain list, not a table ----- */
 .recent-news {
   list-style: none;
