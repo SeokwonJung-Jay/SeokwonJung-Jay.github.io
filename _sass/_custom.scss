@@ -161,14 +161,20 @@ html[data-theme="dark"] #theme-dark {
   padding: 0;
 }
 .recent-news li {
-  margin-bottom: 0.55rem;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
   line-height: 1.6;
 }
+/* Fixed-width date column so wrapped body text stays aligned */
 .recent-news .news-date {
-  font-weight: 600;
-  color: var(--global-text-color);
-  margin-right: 0.4rem;
+  flex: 0 0 5.5rem;
+  color: var(--global-text-color-light);
   white-space: nowrap;
+}
+.recent-news .news-text {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* ----- Publications: clean [N]-numbered list ----- */
@@ -275,5 +281,14 @@ ol.bibliography > li::before {
   }
   .about-sidebar img {
     width: 160px;
+  }
+  /* Narrow screens: stack the date above the text instead of a column */
+  .recent-news li {
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 0.85rem;
+  }
+  .recent-news .news-date {
+    flex-basis: auto;
   }
 }
