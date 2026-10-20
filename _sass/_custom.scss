@@ -177,6 +177,14 @@ html[data-theme="dark"] #theme-dark {
   min-width: 0;
 }
 
+/* Legend for author-contribution markers */
+.pub-legend {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-top: -0.4rem;
+  margin-bottom: 1.1rem;
+}
+
 /* ----- Publications: clean [N]-numbered list ----- */
 ol.bibliography {
   list-style: none;

@@ -39,4 +39,6 @@ In short, I'd like to build LLM-based systems that can remember, retrieve, and u
 
 ## 📝 Selected Publications
 
+<p class="pub-legend"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Mentored intern</p>
+
 {% bibliography --group_by none %}
