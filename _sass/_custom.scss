@@ -169,7 +169,7 @@ html[data-theme="dark"] #theme-dark {
 /* Fixed-width date column so wrapped body text stays aligned */
 .recent-news .news-date {
   flex: 0 0 5.5rem;
-  color: var(--global-text-color-light);
+  color: var(--global-text-color);
   white-space: nowrap;
 }
 .recent-news .news-text {
