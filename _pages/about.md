@@ -21,15 +21,15 @@ latest_posts:
 
 ## About Me
 
-Hi! I'm an MSc student at KAIST AI, advised by [Seong Joon Oh](https://seongjoonoh.com/). I'm broadly interested in how LLMs can stay reliable and personalized as the knowledge they depend on keeps changing. Specifically, my research interests center on:
+Hi! I'm an MSc student at KAIST AI, advised by [Seong Joon Oh](https://seongjoonoh.com/). I'm broadly interested in how LLM agents can find, use, and build on knowledge by themselves, and how that ability can speed up scientific research. Specifically, my research interests center on:
 
-- **Retrieval-augmented generation** (RAG) and retrieval methods
-- **Knowledge editing** through RAG, keeping models' factual knowledge up to date
-- Building **memory systems** and personalization for long-term, persistent agents
+- **Information retrieval** and **retrieval-augmented generation** (RAG), especially retrieval that goes beyond surface-level semantic similarity
+- **Self-evolving agents** that keep improving by updating their memory and knowledge from experience over long horizons
+- **Research automation**, using LLMs for scientific discovery, such as surfacing ideas that transfer across fields
 
 Before my graduate studies, I spent six years co-founding and building a deep learning startup, working end-to-end across business, research, and engineering. That experience shaped how I think about research: not just as a technical problem, but as something that has to hold up in the messy, real-world systems where people actually rely on it.
 
-In short, I'd like to build LLM-based systems that can remember, retrieve, and update what they know in a way that is both trustworthy and personalized to the people who use them.
+In short, I'd like to build LLM-based systems that can retrieve, remember, and improve on what they know, and use that to help people do science.
 
 [**Download my CV**](/assets/pdf/CV_SeokwonJung.pdf){:.cv-link} (PDF)
 
