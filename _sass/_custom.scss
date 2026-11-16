@@ -300,3 +300,15 @@ ol.bibliography > li::before {
     flex-basis: auto;
   }
 }
+
+// Collapsible older news
+.news-more {
+  margin-top: -0.2rem;
+  margin-bottom: 1rem;
+}
+.news-more summary {
+  cursor: pointer;
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.65rem;
+}
