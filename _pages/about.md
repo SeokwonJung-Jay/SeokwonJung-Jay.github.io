@@ -42,3 +42,8 @@ In short, I'd like to build LLM-based systems that can retrieve, remember, and i
 <p class="pub-legend"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Mentored intern</p>
 
 {% bibliography --group_by none %}
+
+## 🤝 Academic Service
+
+- **Co-organizer**, [PALM: Personalized, Aligned, Long-term Memory for AI Systems](https://palm-neurips-2026.github.io/), NeurIPS 2026 Workshop
+- **Co-organizer**, [KAIST AI Workshop 2026](https://luma.com/imh3xjy1)
